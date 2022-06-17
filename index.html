@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>National Development Foundation</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0"
+    />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootsrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.3.0/ekko-lightbox.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.3.0/ekko-lightbox.css"
+    />
+
+    <!-- Clipboard JS -->
+    <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
+  </head>
+  <body>
+    <!-- header start -->
+    <header class="header">
+      <div class="flex-between">
+        <div class="header__logo">
+          <a href="/">
+            <img
+              class="img-responsive"
+              src="https://prod.7luckylooks.com/files/uploads/charity-foundation/logo@2x.png"
+              onError="this.style.display = 'none';"
+            />
+          </a>
+        </div>
+        <button
+          type="button"
+          class="navbar-toggle collapsed"
+          data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- header menu desktop -->
+        <div class="header__menu header__menu_desktop">
+          <li><a href="#about" class="js-scroll-to-block">About</a></li>
+          <li><a href="#team" class="js-scroll-to-block">Team</a></li>
+          <li>
+            <a href="#achievements" class="js-scroll-to-block">Achievements</a>
+          </li>
+          <li><a href="#gallery" class="js-scroll-to-block">Gallery</a></li>
+          <li>
+            <a href="#cooperation" class="js-scroll-to-block">Cooperation</a>
+          </li>
+          <li>
+            <a
+              class="header__button header__button_outline"
+              href="javascript:void(0)"
+              data-toggle="modal"
+              data-target="#bankDetailsModal"
+              >Bank Details</a
+            >
+          </li>
+          <li>
+            <a
+              class="header__button header__button_orange"
+              href="javascript:void(0)"
+              >Help Now</a
+            >
+          </li>
+        </div>
+        <!-- header menu mobile -->
+        <div class="header__menu_mobile">
+          <div
+            class="header__menu collapse navbar-collapse"
+            id="bs-example-navbar-collapse-1"
+          >
+            <li><a href="#about" class="js-scroll-to-block">About</a></li>
+            <li><a href="#team" class="js-scroll-to-block">Team</a></li>
+            <li>
+              <a href="#achievements" class="js-scroll-to-block"
+                >Achievements</a
+              >
+            </li>
+            <li><a href="#gallery" class="js-scroll-to-block">Gallery</a></li>
+            <li>
+              <a href="#cooperation" class="js-scroll-to-block">Cooperation</a>
+            </li>
+            <li>
+              <a
+                class="header__button header__button_outline"
+                href="javascript:void(0)"
+                data-toggle="modal"
+                data-target="#bankDetailsModal"
+                >Bank Details</a
+              >
+            </li>
+            <li>
+              <a
+                class="header__button header__button_orange"
+                href="javascript:void(0)"
+                >Help Now</a
+              >
+            </li>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+    <!-- MODAL:BankDetails -->
+    <!-- Modal -->
+    <div
+      class="modal fade modal-bank-details"
+      id="bankDetailsModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="bankDetailsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="bankDetailsModalLabel">
+              Make a contribution
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active">
+                <a
+                  href="#home"
+                  aria-controls="payment_by_card"
+                  role="tab"
+                  data-toggle="tab"
+                  >Payment by card</a
+                >
+              </li>
+              <li role="presentation">
+                <a
+                  href="#profile"
+                  aria-controls="swift_transfers"
+                  role="tab"
+                  data-toggle="tab"
+                  >SWIFT TRANSFERS</a
+                >
+              </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="payment_by_card">
+                <div class="form-group">
+                  <label class="control-label" for="currency">Currency</label>
+                  <div class="d-flex">
+                    <input
+                      class="form-control"
+                      type="number"
+                      name="currency"
+                      id="currency"
+                      value="10"
+                      placeholder="Enter amount"
+                    />
+                    <select class="form-control form-control-inline">
+                      <option>EUR</option>
+                      <option>USD</option>
+                      <option>PLN</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label" for="email">Email</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Enter your paypal email"
+                  />
+                </div>
+                <button type="button">Support</button>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="swift_transfers">
+                <title>SWIFT TRANSFERS</title>
+                <!-- copyable group -->
+                <div class="copyable">
+                  <div class="copyable-name">Name of Company</div>
+                  <div class="copyable-value">
+                    CO «CF «NATIONAL DEVELOPMENT FUND»
+                  </div>
+                  <button class="copyable-button js-copy-to-clickboard-button">
+                    <img
+                      src="https://prod.7luckylooks.com/files/uploads/charity-foundation/copy.png"
+                      width="16"
+                      height="18"
+                    />
+                    <span>Copy</span>
+                  </button>
+                </div>
+                <!-- -------------- -->
+                <!-- copyable group -->
+                <div class="copyable">
+                  <div class="copyable-name">IBAN Code Euro (EUR)</div>
+                  <div class="copyable-value">
+                    UA053204780000026009924921945
+                  </div>
+                  <button class="copyable-button js-copy-to-clickboard-button">
+                    <img
+                      src="https://prod.7luckylooks.com/files/uploads/charity-foundation/copy.png"
+                      width="16"
+                      height="18"
+                    />
+                    <span>Copy</span>
+                  </button>
+                </div>
+                <!-- -------------- -->
+                <!-- copyable group -->
+                <div class="copyable">
+                  <div class="copyable-name">IBAN Code Polish Zloty (PLN)</div>
+                  <div class="copyable-value">
+                    UA053204780000026009924921945
+                  </div>
+                  <button class="copyable-button js-copy-to-clickboard-button">
+                    <img
+                      src="https://prod.7luckylooks.com/files/uploads/charity-foundation/copy.png"
+                      width="16"
+                      height="18"
+                    />
+                    <span>Copy</span>
+                  </button>
+                </div>
+                <!-- -------------- -->
+                <!-- copyable group -->
+                <div class="copyable">
+                  <div class="copyable-name">Name of the bank</div>
+                  <div class="copyable-value">
+                    JSC “Ukrgasbank”, Ukraine, Kiev, Erevanska Str., 1
+                  </div>
+                  <button class="copyable-button js-copy-to-clickboard-button">
+                    <img
+                      src="https://prod.7luckylooks.com/files/uploads/charity-foundation/copy.png"
+                      width="16"
+                      height="18"
+                    />
+                    <span>Copy</span>
+                  </button>
+                </div>
+                <!-- -------------- -->
+                <!-- copyable group -->
+                <div class="copyable">
+                  <div class="copyable-name">SWIFT code of the bank</div>
+                  <div class="copyable-value">UGASUAUK</div>
+                  <button class="copyable-button js-copy-to-clickboard-button">
+                    <img
+                      src="https://prod.7luckylooks.com/files/uploads/charity-foundation/copy.png"
+                      width="16"
+                      height="18"
+                    />
+                    <span>Copy</span>
+                  </button>
+                </div>
+                <!-- -------------- -->
+                <title>Correspondent Bank:</title>
+                <!-- copyable group -->
+                <div class="copyable">
+                  <div class="copyable-name">IBAN Code Polish Zloty (PLN)</div>
+                  <div class="copyable-value">PL51114000000000113332001001</div>
+                  <button class="copyable-button js-copy-to-clickboard-button">
+                    <img
+                      src="https://prod.7luckylooks.com/files/uploads/charity-foundation/copy.png"
+                      width="16"
+                      height="18"
+                    />
+                    <span>Copy</span>
+                  </button>
+                </div>
+                <!-- -------------- -->
+                <!-- copyable group -->
+                <div class="copyable">
+                  <div class="copyable-name">Name of the bank</div>
+                  <div class="copyable-value">mBank S.A. WARSZAWA, Polska</div>
+                  <button class="copyable-button js-copy-to-clickboard-button">
+                    <img
+                      src="https://prod.7luckylooks.com/files/uploads/charity-foundation/copy.png"
+                      width="16"
+                      height="18"
+                    />
+                    <span>Copy</span>
+                  </button>
+                </div>
+                <!-- -------------- -->
+                <!-- copyable group -->
+                <div class="copyable">
+                  <div class="copyable-name">SWIFT code of the bank</div>
+                  <div class="copyable-value">BREXPLPW</div>
+                  <button class="copyable-button js-copy-to-clickboard-button">
+                    <img
+                      src="https://prod.7luckylooks.com/files/uploads/charity-foundation/copy.png"
+                      width="16"
+                      height="18"
+                    />
+                    <span>Copy</span>
+                  </button>
+                </div>
+                <!-- -------------- -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============= -->
+    <!-- SECTION ABOUT -->
+    <section class="section-about" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>NATIONAL DEVELOPMENT FOUNDATION</h1>
+            <p>
+              Charity organization was created as cooperation of Ukrainian and
+              international volunteers, sportsmen, socially active people in
+              order to support Ukraine and overcome the consequences of the
+              humanitarian crisis
+            </p>
+            <div class="list-dotted">
+              <div>
+                • We support hospitals, medical units, and military doctors with
+              </div>
+              <div>• We gain humanitarian aid for the centers of refugees</div>
+              <div>• We help our defenders by</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img
+              class="img img-responsive"
+              src="https://prod.7luckylooks.com/files/uploads/charity-foundation/about@2x.png"
+              onError="this.style.display = 'none';"
+              title="section-about-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="hr-right"></div>
+    <!-- ============ -->
+
+    <!-- SECTION DIRECTIONS -->
+    <section class="section-directions" id="directions">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img
+              class="img-responsive"
+              src="https://prod.7luckylooks.com/files/uploads/charity-foundation/directions@2x.png"
+            />
+          </div>
+          <div class="col-md-6">
+            <h1>CURRENT DIRECTIONS OF OUR FOUNDATION</h1>
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Health care
+                    </button>
+                  </h2>
+                </div>
+
+                <div
+                  id="collapseOne"
+                  class="collapse"
+                  aria-labelledby="headingOne"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    We support hospitals, medical units, and military doctors.
+                    This direction is divided into three kinds of volunteering
+                    activities: medicine and medical equipment, that most needed
+                    in fighting areas, frontline regions, and rear districts)
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      Refugees
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="collapse"
+                  aria-labelledby="headingTwo"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    We gain humanitarian aid for the centers of refugees. We
+                    support the shelters, orphanages, and children from
+                    disadvantaged families by clothing, food and hygiene
+                    products.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      Education, culture and sport
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapseThree"
+                  class="collapse"
+                  aria-labelledby="headingThree"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    We organize charity events and educational camps where the
+                    children communicate with each other, acquire new knowledge
+                    and do physical activities.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingFour">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      Animals
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapseFour"
+                  class="collapse"
+                  aria-labelledby="headingFour"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    We support animal shelters which were bombed and occupiad by
+                    russia in Kiev region. Provide animal food and equipment.
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="headingFive">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseFive"
+                      aria-expanded="false"
+                      aria-controls="collapseFive"
+                    >
+                      Militaries
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapseFive"
+                  class="collapse"
+                  aria-labelledby="headingFive"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    We help our defenders and military units with necessary
+                    things and psychological support. Our team members often
+                    visit them in fighting areas and hospitals
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============ -->
+
+    <!-- SECTION TEAM -->
+    <section class="section-team" id="team">
+      <div class="container">
+        <h1>Team</h1>
+        <div class="members">
+          <!-- member-row -->
+          <div class="member-row member-row-border-two-sides">
+            <div class="member">
+              <div class="member-img">
+                <img
+                  src="https://prod.7luckylooks.com/files/uploads/charity-foundation/Alexander%20Kulakov@2x.jpg"
+                  onError="this.style.display = 'none';"
+                />
+              </div>
+              <div class="member-info">
+                <div class="member-name">Alexander Kulakov</div>
+                <div class="member-position">Co-founder</div>
+                <div class="member-description">
+                  Secretary of the Chairman of the Volyn Regional Council on
+                  Humanitarian Affairs, Director of the Volyn Regional Center
+                  «Sports for All», The Head of sports federations and public
+                  organizations
+                </div>
+              </div>
+            </div>
+            <div class="member">
+              <div class="member-img">
+                <img
+                  src="https://prod.7luckylooks.com/files/uploads/charity-foundation/Iryna%20Zbyshko@2x.jpg"
+                  onError="this.style.display = 'none';"
+                />
+              </div>
+              <div class="member-info">
+                <div class="member-name">Iryna Zbyshko</div>
+                <div class="member-position">Co-founder</div>
+                <div class="member-description">
+                  PHD of Political Science, political consultant, Head of
+                  consulting agency RATCATCHERS LLC, International Volunteer.
+                  Managing all health care directions in cooperation with
+                  charity foundations in Germany.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ============ -->
+
+          <!-- member-row -->
+          <div class="member-row">
+            <div class="member">
+              <div class="member-img">
+                <img
+                  src="https://prod.7luckylooks.com/files/uploads/charity-foundation/Maksym%20Tsyhanivskiy@2x.jpg"
+                  onError="this.style.display = 'none';"
+                />
+              </div>
+              <div class="member-info">
+                <div class="member-name">Maksym Tsyhanivskiy</div>
+                <div class="member-position">Co-founder</div>
+                <div class="member-description">
+                  Leader of international projects in the sectors of effective
+                  management and marketing, investment attraction, and product
+                  management
+                </div>
+              </div>
+            </div>
+            <div class="member">
+              <div class="member-img">
+                <img
+                  src="https://prod.7luckylooks.com/files/uploads/charity-foundation/Roman%20Smidyuk@2x.jpg"
+                  onError="this.style.display = 'none';"
+                />
+              </div>
+              <div class="member-info">
+                <div class="member-name">Roman Smidyuk</div>
+                <div class="member-position">Co-founder</div>
+                <div class="member-description">
+                  Founder of the «SmidyukAcademy» - network of sports clubs,
+                  organizator of international sports summits, Ambassador of
+                  “Adidas” and “MyProtein” in Ukraine.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ============ -->
+
+          <!-- member-row -->
+          <div class="member-row">
+            <div class="member">
+              <div class="member-img">
+                <img
+                  src="https://prod.7luckylooks.com/files/uploads/charity-foundation/Alexander%20Dudka@2x.jpg"
+                  onError="this.style.display = 'none';"
+                />
+              </div>
+              <div class="member-info">
+                <div class="member-name">Alexander Dudka</div>
+                <div class="member-position">Сoordinator</div>
+                <div class="member-description">
+                  Coordinates the working of warehouses in Ukraine and Poland.
+                  Manages volunteers who sort and deliver aid to different
+                  regions of Ukraine
+                </div>
+              </div>
+            </div>
+            <div class="member">
+              <div class="member-img">
+                <img
+                  src="https://prod.7luckylooks.com/files/uploads/charity-foundation/Mariana%20Stetsura@2x.jpg"
+                  onError="this.style.display = 'none';"
+                />
+              </div>
+              <div class="member-info">
+                <div class="member-name">Mariana Stetsura</div>
+                <div class="member-position">Сoordinator</div>
+                <div class="member-description">
+                  Ukrainian volunteer. Manages education and sport direction
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ============ -->
+
+          <!-- member-row -->
+          <div class="member-row">
+            <div class="member">
+              <div class="member-img">
+                <img
+                  src="https://prod.7luckylooks.com/files/uploads/charity-foundation/Iryna%20Izvekova@2x.jpg"
+                  onError="this.style.display = 'none';"
+                />
+              </div>
+              <div class="member-info">
+                <div class="member-name">Iryna Izvekova</div>
+                <div class="member-position">Сoordinator</div>
+                <div class="member-description">
+                  Cooperate delivery of humanitarian aid between the regions.
+                  Social activist, the Head of sports federations and public
+                  organizations.
+                </div>
+              </div>
+            </div>
+            <div class="member">
+              <div class="member-img">
+                <img
+                  src="https://prod.7luckylooks.com/files/uploads/charity-foundation/Ivan%20Kuznetsov@2x.jpg"
+                  onError="this.style.display = 'none';"
+                />
+              </div>
+              <div class="member-info">
+                <div class="member-name">Ivan Kuznetsov</div>
+                <div class="member-position">
+                  Information Technology Advisor
+                </div>
+                <div class="member-description">Description</div>
+              </div>
+            </div>
+          </div>
+          <!-- ============ -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ -->
+
+    <section class="section-words">
+      <div class="hr-right"></div>
+      <p>
+        <i>
+          «Each of us has his own background because everyone has successfully
+          managed to realize themselves in a peaceful time. From the beginning
+          of the war, we have been continuing our humanitarian mission, each of
+          us in his own direction, where he or she could be the most productive
+          and useful. I am convinced that by uniting we will be able to do much
+          more»</i
+        >
+        <br /><br />
+        <b>Oleksandr Kulakov</b>, co-founder of the National Development
+        Foundation.
+      </p>
+      <div class="hr-left"></div>
+    </section>
+
+    <section class="section-achievements" id="achievements">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Achievements</h2>
+            <span class="section-achievements-h-delim"></span>
+            <p>
+              In cooperation with German charity foundations, we have provided
+              medical aid for 30 hospitals in Kyiv, Kryvyi Rih, Odesa, Mykolaiv,
+              and Khmelnytsky regions. <br /><br />We sent 50 tons of animal
+              food to the shelters of Kyiv, Volyn, and Khmelnytsky regions. We
+              are actively helping the civilian population affected by russian
+              invasion by evacuating the population from hot spots, delivering
+              food to the elderly, and dispensing the necessary medicines. In
+              cooperation with Volyn charity organizations and Volyn regional
+              council we provided more than 700 requests, 300 tons of
+              humanitarian aid to the different regions of Ukraine
+            </p>
+          </div>
+          <div class="col-md-3">
+            <span class="section-achievements-v-delim"></span>
+            <div class="section-achievements__list">
+              <div class="section-achievements__block">
+                <div class="section-achievements__title">requests</div>
+                <div class="section-achievements__number">700</div>
+              </div>
+              <div class="section-achievements__block">
+                <div class="section-achievements__title">
+                  Of humanitarian aid to the different regions of Ukraine
+                </div>
+                <div class="section-achievements__number">300 tons</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="section-achievements__list">
+              <div class="section-achievements__block">
+                <div class="section-achievements__title">hospitals</div>
+                <div class="section-achievements__number">30</div>
+              </div>
+              <div class="section-achievements__block">
+                <div class="section-achievements__title">Of animal food</div>
+                <div class="section-achievements__number">50 tons</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-gallery" id="gallery">
+      <div class="container">
+        <h1 class="text-center">Gallery</h1>
+        <div class="row">
+          <a
+            href="https://unsplash.it/1200/768.jpg?image=251"
+            data-toggle="lightbox"
+            data-gallery="example-gallery"
+            class="col-sm-3 col-md-3"
+          >
+            <img
+              src="https://unsplash.it/600.jpg?image=251"
+              class="img-fluid img-responsive"
+            />
+          </a>
+          <a
+            href="https://unsplash.it/1200/768.jpg?image=252"
+            data-toggle="lightbox"
+            data-gallery="example-gallery"
+            class="col-sm-3 col-md-3"
+          >
+            <img
+              src="https://unsplash.it/600.jpg?image=252"
+              class="img-fluid img-responsive"
+            />
+          </a>
+          <a
+            href="https://unsplash.it/1200/768.jpg?image=253"
+            data-toggle="lightbox"
+            data-gallery="example-gallery"
+            class="col-sm-3 col-md-3"
+          >
+            <img
+              src="https://unsplash.it/600.jpg?image=253"
+              class="img-fluid img-responsive"
+            />
+          </a>
+          <a
+            href="https://unsplash.it/1200/768.jpg?image=253"
+            data-toggle="lightbox"
+            data-gallery="example-gallery"
+            class="col-sm-3 col-md-3"
+          >
+            <img
+              src="https://unsplash.it/600.jpg?image=253"
+              class="img-fluid img-responsive"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-cooperation" id="cooperation">
+      <div class="container">
+        <h1>Cooperation</h1>
+        <div class="section-cooperation__partners">
+          <a href="javascript:void(0)">
+            <img
+              class="img-responsive"
+              src="https://prod.7luckylooks.com/files/uploads/charity-foundation/partners-1@2x.png"
+              width="210"
+              height="210"
+            />
+          </a>
+          <a href="javascript:void(0)">
+            <img
+              class="img-responsive"
+              src="https://prod.7luckylooks.com/files/uploads/charity-foundation/partners-2@2x.png"
+              width="210"
+              height="210"
+            />
+          </a>
+          <a href="javascript:void(0)">
+            <img
+              class="img-responsive"
+              src="https://prod.7luckylooks.com/files/uploads/charity-foundation/partners-3@2x.png"
+              width="210"
+              height="210"
+            />
+          </a>
+          <a href="javascript:void(0)">
+            <img
+              class="img-responsive"
+              src="https://prod.7luckylooks.com/files/uploads/charity-foundation/partners-4@2x.png"
+              width="210"
+              height="210"
+            />
+          </a>
+          <a href="javascript:void(0)">
+            <img
+              class="img-responsive"
+              src="https://prod.7luckylooks.com/files/uploads/charity-foundation/partners-5@2x.png"
+              width="150"
+              height="210"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <a href="/">
+              <img
+                class="img-responsive"
+                src="https://prod.7luckylooks.com/files/uploads/charity-foundation/logo@2x.png"
+                onError="this.style.display = 'none';"
+              />
+            </a>
+            <ul class="footer__menu">
+              <li><a href="#about" class="js-scroll-to-block">About</a></li>
+              <li><a href="#team" class="js-scroll-to-block">Team</a></li>
+              <li>
+                <a href="#achievements" class="js-scroll-to-block"
+                  >Achievements</a
+                >
+              </li>
+              <li><a href="#gallery" class="js-scroll-to-block">Gallery</a></li>
+              <li>
+                <a href="#cooperation" class="js-scroll-to-block"
+                  >Cooperation</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <div class="footer__list">
+              <label>Contacts</label>
+              <ul>
+                <li>
+                  <span>Lutsk, Ukraine </span>
+                </li>
+                <li>
+                  <span>Danylo Halytskoho 33</span>
+                </li>
+                <li>
+                  <span>79003</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="footer__list">
+              <label>Contacts</label>
+              <ul>
+                <li>
+                  <span>Lutsk, Ukraine </span>
+                </li>
+                <li>
+                  <span>Danylo Halytskoho 33</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

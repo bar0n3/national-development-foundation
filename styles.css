@@ -50,7 +50,10 @@ a:hover {
   flex-direction: column;
   justify-content: center;
 }
-
+.flex-end {
+  display: flex;
+  justify-content: center;
+}
 .hr-right {
   display: flex;
   justify-content: end;
@@ -371,6 +374,11 @@ a:hover {
   margin-top: 35px;
   max-height: 485px;
 }
+.section-directions .img-responsive-transformed {
+  transform: translateY(-460px);
+  max-height: 460px;
+  margin: 0;
+}
 .section-directions h1 {
   font-size: 56px !important;
 }
@@ -583,6 +591,9 @@ a:hover {
 .section-gallery h1 {
   margin: 120px 0;
 }
+.section-gallery .row {
+  margin-bottom: 15px;
+}
 [data-gallery] {
   overflow: hidden;
   height: 300px;
@@ -613,6 +624,10 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.section-cooperation__partners_centered {
+  justify-content: center;
+  gap: 60px;
 }
 
 /* FOOTER */

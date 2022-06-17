@@ -3,7 +3,10 @@
 }
 
 /* GENERAL STYLES */
-
+html,
+body {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
@@ -206,8 +209,8 @@ a:hover {
   opacity: 0.5;
 }
 .modal-bank-details .nav-tabs li.active a {
-  border: none;
-  border-bottom: 4px solid #ccd2c4;
+  border: none !important;
+  border-bottom: 4px solid #ccd2c4 !important;
   font: normal normal bold 16px/19px Raleway;
   letter-spacing: 0px;
   color: #141412;
@@ -556,13 +559,14 @@ a:hover {
   opacity: 1;
 }
 .section-achievements__number {
+  white-space: nowrap;
   text-align: left;
   font: normal normal 600 65px/98px Poppins;
   letter-spacing: 0px;
   color: #141412;
   opacity: 1;
 }
-.section-achievements__list {
+.section-achievements-v-delim + .section-achievements__list {
   padding-left: 30px;
 }
 .section-achievements-v-delim {
@@ -733,7 +737,9 @@ a:hover {
     width: 690px !important;
   }
   .footer__list {
-    float: right;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
   }
   .footer__list-v-delimiter {
     border-right: 1px solid;

@@ -19,7 +19,9 @@ h1 {
   color: #000000;
 }
 
-ul,
+ul {
+  padding-left: 0;
+}
 ul li {
   list-style: none !important;
 }
@@ -617,6 +619,18 @@ a:hover {
 .footer__menu li a {
   color: #000;
   list-style: none;
+  font: normal normal medium 14px/16px Raleway;
+  letter-spacing: 0px;
+}
+.footer__list li,
+.footer__menu li {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.footer__list label {
+  text-align: left;
+  font: normal normal bold 32px/37px Raleway;
+  letter-spacing: 0px;
 }
 
 /* MEDIA MOBILE & DESKTOP */
@@ -703,6 +717,10 @@ a:hover {
   .header__logo img {
     height: 80px;
   }
+  .footer__list,
+  .footer__menu {
+    padding: 15px;
+  }
 }
 @media screen and (min-width: 768px) {
   .header__logo {
@@ -713,5 +731,17 @@ a:hover {
   }
   .modal-dialog {
     width: 690px !important;
+  }
+  .footer__list {
+    float: right;
+  }
+  .footer__list-v-delimiter {
+    border-right: 1px solid;
+  }
+  .footer__list-v-delimiter .footer__menu {
+    padding-left: 92px;
+  }
+  .footer__list {
+    margin-top: 55px;
   }
 }

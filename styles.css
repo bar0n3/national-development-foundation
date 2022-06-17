@@ -375,8 +375,9 @@ a:hover {
   max-height: 485px;
 }
 .section-directions .img-responsive-transformed {
-  transform: translateY(-460px);
+  margin-top: -410px !important;
   max-height: 460px;
+  max-width: calc(100% - 50px);
   margin: 0;
 }
 .section-directions h1 {

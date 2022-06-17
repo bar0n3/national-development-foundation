@@ -48,4 +48,18 @@ $(document).ready(function () {
       console.log(e);
     });
   }, 100);
+
+  // switch selected in accordion direction image
+  $('.accordion .card button').click(function () {
+    const active_direction = $(
+      '.section-directions .img-responsive.img-responsive-transformed'
+    );
+    const name = $(this).data('selected-image-name');
+    const path = active_direction.attr('src');
+    const path_parts = path.split('/');
+    const result = [...path_parts.splice(0, path_parts.length - 1), name].join(
+      '/'
+    );
+    active_direction.attr('src', result);
+  });
 });

@@ -588,6 +588,18 @@ a:hover {
   height: 300px;
 }
 
+[data-gallery].landscape-wrapper img {
+  height: 100%;
+  max-width: initial;
+  width: auto;
+}
+
+[data-gallery].portrait-wrapper img {
+  height: auto;
+  max-width: initial;
+  width: calc(100% + 15px);
+}
+
 /* SECTION COOPERATION */
 .section-cooperation {
   padding: 120px 0;
